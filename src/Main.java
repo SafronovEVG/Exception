@@ -1,5 +1,13 @@
+import exception.WrongLoginException;
+import exception.WrongPasswordException;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        try {
+            UserAuthorization.checkUserLogin(null, "asa+D_", "asaD_");
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
     }
+
 }
