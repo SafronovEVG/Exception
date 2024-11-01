@@ -1,8 +1,13 @@
-import java.util.Scanner;
+import exception.WrongLoginException;
+import exception.WrongPasswordException;
 
 public class Main {
     public static void main(String[] args) {
-        User.checkUserLogin("asfsdasasf_a24", "asaD_", "asaD_");
+        try {
+            UserAuthorization.checkUserLogin(null, "asa+D_", "asaD_");
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
     }
 
 }
