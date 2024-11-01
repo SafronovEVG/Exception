@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        User.checkUserLogin("asfsdasasf_a24", "asaD_", "asaD_");
     }
+
 }
